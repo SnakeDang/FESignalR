@@ -7,9 +7,10 @@ function App() {
   const [messages, setMessages] = useState(null);
   useEffect(()=>{
     const connection = new HubConnectionBuilder()
-        .withUrl("https://localhost:5001/RealTimeRobot",{
+        .withUrl("http://14.241.244.228:3021/RealTimeRobot",{
           // transport: HttpTransportType.WebSockets,
           accessTokenFactory: () => {
+            // return token user
               return `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImMwMjZiYzhiLThlZTAtNDVlZS1hNzRmLWRkMmUzMGU4NDIyNyIsInJvbGUiOiJBZG1pbmlzdHJhdG9yIiwibmJmIjoxNzAyOTQ5ODkzLCJleHAiOjE3MDM1NTQ2OTMsImlhdCI6MTcwMjk0OTg5MywiaXNzIjoiY29yZS5jb20iLCJhdWQiOiJjb3JlLmNvbSJ9.Znmm1_3f2ii0Vn07t9_vp2qVJ423hLNAc9UCy4RpR-8`
           }
       })
